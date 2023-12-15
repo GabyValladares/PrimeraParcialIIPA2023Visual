@@ -4,6 +4,8 @@
  */
 package erick;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 59398
@@ -45,6 +47,9 @@ public class parcial extends javax.swing.JFrame {
         lblTipoVehiculo = new javax.swing.JLabel();
         lblValorVehiculo = new javax.swing.JLabel();
         lblMultas = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtResultados = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,6 +79,17 @@ public class parcial extends javax.swing.JFrame {
 
         lblMultas.setText("MULTAS");
 
+        jButton1.setText("VALIDAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        txtResultados.setColumns(20);
+        txtResultados.setRows(5);
+        jScrollPane1.setViewportView(txtResultados);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -90,7 +106,7 @@ public class parcial extends javax.swing.JFrame {
                     .addComponent(lblColor)
                     .addComponent(lblTipoVehiculo)
                     .addComponent(lblValorVehiculo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNombres, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCedula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,11 +117,20 @@ public class parcial extends javax.swing.JFrame {
                     .addComponent(txtTipoVehiculo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtValorVehiculo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMultas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(166, 166, 166)
                 .addComponent(lblTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(208, 208, 208))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +179,11 @@ public class parcial extends javax.swing.JFrame {
                             .addComponent(lblValorVehiculo))
                         .addGap(18, 18, 18)
                         .addComponent(txtMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addGap(138, 138, 138)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(39, 39, 39))
         );
 
         pack();
@@ -162,7 +191,64 @@ public class parcial extends javax.swing.JFrame {
 
     private void txtNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombresActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtNombresActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+ 
+    String cedula = txtCedula.getText();
+    String propietario = txtNombres.getText();
+    String placa = txtPlaca.getText();
+    String añoFabricacion = txtAnioFabricacion.getText();
+    String marca = txtMarca.getText();
+    String color = txtColor.getText();
+    String tipoVehiculo = txtTipoVehiculo.getText();
+    String valor = txtValorVehiculo.getText();
+    String multas = txtMultas.getText();
+    String validacion = txtResultados.getText();
+
+    int añoFabricacionInt = Integer.parseInt(añoFabricacion);
+    double valorVehiculo = Double.parseDouble(valor);
+    boolean tieneMultas = !multas.isEmpty();
+
+    double importeRenovacionPlacas = 0;
+    double multaContaminacion = 0;
+    double valorMatriculacion = 0;
+
+    if (cedula.startsWith("1") && placa.startsWith("I")) {
+        importeRenovacionPlacas = 0.05 * 435; 
+    }
+
+    if (añoFabricacionInt < 2010) {
+        multaContaminacion = 0.02 * (2022 - añoFabricacionInt); 
+    }
+
+    if (marca.equalsIgnoreCase("Toyota")) {
+        if (tipoVehiculo.equalsIgnoreCase("Jeep")) {
+            valorMatriculacion = 0.08 * valorVehiculo;
+        } else if (tipoVehiculo.equalsIgnoreCase("Camioneta")) {
+            valorMatriculacion = 0.12 * valorVehiculo;
+        }
+    } else if (marca.equalsIgnoreCase("Suzuki")) {
+        if (tipoVehiculo.equalsIgnoreCase("Vitara")) {
+            valorMatriculacion = 0.10 * valorVehiculo;
+        } else if (tipoVehiculo.equalsIgnoreCase("Automóvil")) {
+            valorMatriculacion = 0.09 * valorVehiculo;
+        }
+    }
+
+    double multaPorMultas = tieneMultas ? 0.25 * 435 : 0;
+
+    double totalPagar = importeRenovacionPlacas + multaContaminacion + valorMatriculacion + multaPorMultas;
+
+    txtResultados.setText("Importe Renovación Placas: $" + importeRenovacionPlacas +
+        "\nMulta Contaminación: $" + multaContaminacion +
+        "\nValor Matriculación: $" + valorMatriculacion +
+        "\nMulta por Multas: $" + multaPorMultas +
+        "\nTotal a Pagar: $" + totalPagar);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,6 +286,8 @@ public class parcial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAnioFabricacion;
     private javax.swing.JLabel lblCedula;
     private javax.swing.JLabel lblColor;
@@ -217,7 +305,9 @@ public class parcial extends javax.swing.JFrame {
     private javax.swing.JTextField txtMultas;
     private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtPlaca;
+    private javax.swing.JTextArea txtResultados;
     private javax.swing.JTextField txtTipoVehiculo;
     private javax.swing.JTextField txtValorVehiculo;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -372,7 +372,7 @@ public class Matricula extends javax.swing.JFrame {
 
         // Mostrar el resultado en el JTextArea
         txtSalida.setText("Importe de matriculación: " + importeMatriculacion);
-
+        importeMatriculacion = 0.0;
     }//GEN-LAST:event_btnEnviarActionPerformed
 }
     private void txtNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombresActionPerformed

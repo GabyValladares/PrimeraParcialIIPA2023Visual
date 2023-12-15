@@ -206,7 +206,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="si posee o no multas"/>
+            <Property name="text" type="java.lang.String" value="Posee Multas:"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -216,7 +216,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane1">
+            <Component class="javax.swing.JTextPane" name="txtCedula">
             </Component>
           </SubComponents>
         </Container>
@@ -227,7 +227,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane2">
+            <Component class="javax.swing.JTextPane" name="txtNombres">
             </Component>
           </SubComponents>
         </Container>
@@ -238,7 +238,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane3">
+            <Component class="javax.swing.JTextPane" name="txtAnio">
             </Component>
           </SubComponents>
         </Container>
@@ -249,7 +249,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane4">
+            <Component class="javax.swing.JTextPane" name="txtMarca">
             </Component>
           </SubComponents>
         </Container>
@@ -260,7 +260,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane5">
+            <Component class="javax.swing.JTextPane" name="txtPlaca">
             </Component>
           </SubComponents>
         </Container>
@@ -271,7 +271,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane6">
+            <Component class="javax.swing.JTextPane" name="txtColor">
             </Component>
           </SubComponents>
         </Container>
@@ -282,7 +282,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane7">
+            <Component class="javax.swing.JTextPane" name="txtTipo">
             </Component>
           </SubComponents>
         </Container>
@@ -293,7 +293,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane8">
+            <Component class="javax.swing.JTextPane" name="txtValor">
             </Component>
           </SubComponents>
         </Container>
@@ -304,7 +304,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="jTextPane9">
+            <Component class="javax.swing.JTextPane" name="txtMultas">
             </Component>
           </SubComponents>
         </Container>

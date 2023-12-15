@@ -36,23 +36,23 @@ public class DatosVehiculo extends javax.swing.JFrame {
         lblValor = new javax.swing.JLabel();
         lblMultas = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        txtCedula = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        txtNombres = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextPane3 = new javax.swing.JTextPane();
+        txtAnio = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextPane4 = new javax.swing.JTextPane();
+        txtMarca = new javax.swing.JTextPane();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextPane5 = new javax.swing.JTextPane();
+        txtPlaca = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane6 = new javax.swing.JTextPane();
+        txtColor = new javax.swing.JTextPane();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTextPane7 = new javax.swing.JTextPane();
+        txtTipo = new javax.swing.JTextPane();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTextPane8 = new javax.swing.JTextPane();
+        txtValor = new javax.swing.JTextPane();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jTextPane9 = new javax.swing.JTextPane();
+        txtMultas = new javax.swing.JTextPane();
         lblTema = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,25 +82,25 @@ public class DatosVehiculo extends javax.swing.JFrame {
         lblValor.setText("Valor del Vehículo");
 
         lblMultas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblMultas.setText("si posee o no multas");
+        lblMultas.setText("Posee Multas:");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(txtCedula);
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jScrollPane2.setViewportView(txtNombres);
 
-        jScrollPane3.setViewportView(jTextPane3);
+        jScrollPane3.setViewportView(txtAnio);
 
-        jScrollPane4.setViewportView(jTextPane4);
+        jScrollPane4.setViewportView(txtMarca);
 
-        jScrollPane5.setViewportView(jTextPane5);
+        jScrollPane5.setViewportView(txtPlaca);
 
-        jScrollPane6.setViewportView(jTextPane6);
+        jScrollPane6.setViewportView(txtColor);
 
-        jScrollPane7.setViewportView(jTextPane7);
+        jScrollPane7.setViewportView(txtTipo);
 
-        jScrollPane8.setViewportView(jTextPane8);
+        jScrollPane8.setViewportView(txtValor);
 
-        jScrollPane9.setViewportView(jTextPane9);
+        jScrollPane9.setViewportView(txtMultas);
 
         lblTema.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTema.setText(" Vehículo a matricular");
@@ -246,15 +246,6 @@ public class DatosVehiculo extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JTextPane jTextPane3;
-    private javax.swing.JTextPane jTextPane4;
-    private javax.swing.JTextPane jTextPane5;
-    private javax.swing.JTextPane jTextPane6;
-    private javax.swing.JTextPane jTextPane7;
-    private javax.swing.JTextPane jTextPane8;
-    private javax.swing.JTextPane jTextPane9;
     private javax.swing.JLabel lblAnioFabricacion;
     private javax.swing.JLabel lblColor;
     private javax.swing.JLabel lblMarca;
@@ -265,5 +256,14 @@ public class DatosVehiculo extends javax.swing.JFrame {
     private javax.swing.JLabel lblTema;
     private javax.swing.JLabel lblTipo;
     private javax.swing.JLabel lblValor;
+    private javax.swing.JTextPane txtAnio;
+    private javax.swing.JTextPane txtCedula;
+    private javax.swing.JTextPane txtColor;
+    private javax.swing.JTextPane txtMarca;
+    private javax.swing.JTextPane txtMultas;
+    private javax.swing.JTextPane txtNombres;
+    private javax.swing.JTextPane txtPlaca;
+    private javax.swing.JTextPane txtTipo;
+    private javax.swing.JTextPane txtValor;
     // End of variables declaration//GEN-END:variables
 }

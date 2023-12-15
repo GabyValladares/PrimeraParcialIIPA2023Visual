@@ -1,5 +1,8 @@
 package clases;
 
+import static java.lang.Boolean.toString;
+import static java.lang.Short.toString;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,7 +20,7 @@ public class DatosPersonales extends javax.swing.JFrame {
     public DatosPersonales() {
         initComponents();
     }
-
+    double sumat = 0;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -207,13 +210,47 @@ public class DatosPersonales extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
-        // TODO add your handling code here:
+    String cedula = txtcedula.getText();
+    String nombre = txtnombre.getText();
+    String placa = txtplaca.getText();
+    String anio= txtanioehiculo.getText();
+    String marca= txtmarca.getText();
+    String color = txtcolor.getText();
+    String tipo = txttipo.getText();
+    String valor = txtvalor.getText();
+    String multas = txtmultas.getText();
+
+    
+    
+    
+// TODO add your handling code here:
        Ficha f=new Ficha();
        f.setVisible(true);
        this.dispose();
        
     }//GEN-LAST:event_btnVerActionPerformed
-
+    public void importeNP(String cedula, String placa){
+        if (cedula.substring(0, 1).equals("1")&&
+            placa.substring(0, 1).equals("I")) {
+            
+            sumat += 0.87;
+        } else {
+            System.out.println("El número de cédula no comienza con '1'. ni la plana en I");
+        }
+    
+    }
+    public void contaminacion(String anio){
+        int ani = Integer.parseInt(anio);
+        if (ani<=2010) {
+            for ( int i = ani ; i < 2023; i++) {
+             sumat += 2.17;   
+            }
+        }
+        else{
+            System.out.println("es mayora al 2010");
+        }
+    
+    }
     private void txtplacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtplacaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtplacaActionPerformed

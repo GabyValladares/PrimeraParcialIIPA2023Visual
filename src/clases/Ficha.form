@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmarca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MARCA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtanio">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtmarca">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcolor">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txttipo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcolor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="COLOR:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtvalor">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbltipov">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TIPO VEHICULO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtmultas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblvalor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="VALOR VEHICULO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmultas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SI POSEE O NO MULTAS:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcedula">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcedula">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N CEDULA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblnombre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOMBRE:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblplaca">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PLACA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnombre">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblanio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ANIO FABRICACION V:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtplaca">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,13 +93,199 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="226" max="32767" attributes="0"/>
+              <Component id="lbltitulo" min="-2" pref="242" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+              <Component id="btnvalidar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblanio1" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                      <Component id="lbltipov1" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+                      <Component id="lblvalor1" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblmultas1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblcolor1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="lblmarca1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="lblplaca1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="lblcedula1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="lblnombre1" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtcedula1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtnombre1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtplaca1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtanio1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtmarca1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtcolor1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txttipo1" alignment="1" min="-2" pref="213" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtmultas1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtvalor1" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="lbltitulo" min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace pref="390" max="32767" attributes="0"/>
+              <Component id="btnvalidar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtcedula1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblcedula1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="lblnombre1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtnombre1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtplaca1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblplaca1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtanio1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblanio1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtmarca1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblmarca1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtcolor1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblcolor1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txttipo1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="txtvalor1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="txtmultas1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lbltipov1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="lblvalor1" min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Component id="lblmultas1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lbltitulo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="INFOTMACION FICHA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnvalidar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="VALIDAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnvalidarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmarca1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="MARCA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtanio1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtmarca1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcolor1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txttipo1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcolor1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="COLOR:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtvalor1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbltipov1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TIPO VEHICULO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtmultas1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtmultas1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblvalor1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="VALOR VEHICULO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmultas1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SI POSEE O NO MULTAS:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtcedula1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblcedula1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N CEDULA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblnombre1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOMBRE:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblplaca1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PLACA:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnombre1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblanio1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ANIO FABRICACION V:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtplaca1">
+    </Component>
+  </SubComponents>
 </Form>

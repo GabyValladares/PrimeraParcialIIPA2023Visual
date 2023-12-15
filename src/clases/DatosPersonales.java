@@ -1,5 +1,7 @@
 package clases;
 
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -17,7 +19,9 @@ public class DatosPersonales extends javax.swing.JFrame {
     public DatosPersonales() {
         initComponents();
     }
-
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,6 +32,26 @@ public class DatosPersonales extends javax.swing.JFrame {
     private void initComponents() {
 
         btnVer = new javax.swing.JButton();
+        lblcedula = new javax.swing.JLabel();
+        lblnombre = new javax.swing.JLabel();
+        lblplaca = new javax.swing.JLabel();
+        lblanio = new javax.swing.JLabel();
+        lblmarca = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblcolor = new javax.swing.JLabel();
+        lbltipov = new javax.swing.JLabel();
+        lblvalor = new javax.swing.JLabel();
+        lblmultas = new javax.swing.JLabel();
+        txtcedula = new javax.swing.JTextField();
+        txtnombre = new javax.swing.JTextField();
+        txtplaca = new javax.swing.JTextField();
+        txtanio = new javax.swing.JTextField();
+        txtmarca = new javax.swing.JTextField();
+        txtcolor = new javax.swing.JTextField();
+        txttipo = new javax.swing.JTextField();
+        txtvalor = new javax.swing.JTextField();
+        txtmultas = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,20 +62,130 @@ public class DatosPersonales extends javax.swing.JFrame {
             }
         });
 
+        lblcedula.setText("N CEDULA:");
+
+        lblnombre.setText("NOMBRE:");
+
+        lblplaca.setText("PLACA:");
+
+        lblanio.setText("ANIO FABRICACION V:");
+
+        lblmarca.setText("MARCA:");
+
+        jLabel6.setText("DATOS PERSONALES");
+
+        lblcolor.setText("COLOR:");
+
+        lbltipov.setText("TIPO VEHICULO:");
+
+        lblvalor.setText("VALOR VEHICULO:");
+
+        lblmultas.setText("SI POSEE O NO MULTAS:");
+
+        txtmultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmultasActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Guardar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
+                .addGap(142, 142, 142)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnVer)
-                .addGap(24, 24, 24))
+                .addGap(45, 45, 45))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(211, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblanio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbltipov, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblmultas)
+                    .addComponent(lblcolor, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblmarca, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblplaca, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtcedula)
+                        .addComponent(txtnombre)
+                        .addComponent(txtplaca)
+                        .addComponent(txtanio)
+                        .addComponent(txtmarca)
+                        .addComponent(txtcolor)
+                        .addComponent(txttipo, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtmultas, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(txtvalor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
-                .addComponent(btnVer)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtcedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblcedula))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(lblnombre))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtplaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblplaca))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtanio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblanio))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtmarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblmarca))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtcolor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblcolor))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txttipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(txtvalor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(txtmultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbltipov)
+                        .addGap(27, 27, 27)
+                        .addComponent(lblvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(lblmultas)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnVer)
+                    .addComponent(jButton1))
                 .addGap(20, 20, 20))
         );
 
@@ -65,6 +199,35 @@ public class DatosPersonales extends javax.swing.JFrame {
        this.dispose();
        
     }//GEN-LAST:event_btnVerActionPerformed
+
+    private void txtmultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmultasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmultasActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     String cedula = txtcedula.getText();
+     String nombre = txtnombre.getText();
+     String placa = txtplaca.getText();
+     String favanio = txtanio.getText();
+     String marca = txtmarca.getText();
+     String color = txtcolor.getText();
+     String tipov = txttipo.getText();
+     String valorv = txtvalor.getText(); 
+     String multas = txtmultas.getText();
+     
+    JOptionPane.showMessageDialog(this, "DATOS PERSONALES:\n" +
+        "Cédula: " + cedula + "\n" +
+        "Color: " + color + "\n" +
+        "Año de Fabricación: " + favanio + "\n" +
+        "Marca: " + marca + "\n" +
+        "Multas: " + multas + "\n" +
+        "Nombre: " + nombre + "\n" +
+        "Número de Placa: " + placa + "\n" +
+        "Tipo de Vehículo: " + tipov + "\n" +
+        "Valor del Vehículo: " + valorv);
+
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,5 +266,25 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVer;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel lblanio;
+    private javax.swing.JLabel lblcedula;
+    private javax.swing.JLabel lblcolor;
+    private javax.swing.JLabel lblmarca;
+    private javax.swing.JLabel lblmultas;
+    private javax.swing.JLabel lblnombre;
+    private javax.swing.JLabel lblplaca;
+    private javax.swing.JLabel lbltipov;
+    private javax.swing.JLabel lblvalor;
+    private javax.swing.JTextField txtanio;
+    private javax.swing.JTextField txtcedula;
+    private javax.swing.JTextField txtcolor;
+    private javax.swing.JTextField txtmarca;
+    private javax.swing.JTextField txtmultas;
+    private javax.swing.JTextField txtnombre;
+    private javax.swing.JTextField txtplaca;
+    private javax.swing.JTextField txttipo;
+    private javax.swing.JTextField txtvalor;
     // End of variables declaration//GEN-END:variables
 }

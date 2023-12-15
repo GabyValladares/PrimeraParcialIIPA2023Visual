@@ -4,6 +4,8 @@
  */
 package clases;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -26,21 +28,252 @@ public class Ficha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        lblmarca = new javax.swing.JLabel();
+        txtanio = new javax.swing.JTextField();
+        txtmarca = new javax.swing.JTextField();
+        txtcolor = new javax.swing.JTextField();
+        txttipo = new javax.swing.JTextField();
+        lblcolor = new javax.swing.JLabel();
+        txtvalor = new javax.swing.JTextField();
+        lbltipov = new javax.swing.JLabel();
+        txtmultas = new javax.swing.JTextField();
+        lblvalor = new javax.swing.JLabel();
+        lblmultas = new javax.swing.JLabel();
+        txtcedula = new javax.swing.JTextField();
+        lblcedula = new javax.swing.JLabel();
+        lblnombre = new javax.swing.JLabel();
+        lblplaca = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
+        lblanio = new javax.swing.JLabel();
+        txtplaca = new javax.swing.JTextField();
+        lbltitulo = new javax.swing.JLabel();
+        btnvalidar = new javax.swing.JButton();
+        lblmarca1 = new javax.swing.JLabel();
+        txtanio1 = new javax.swing.JTextField();
+        txtmarca1 = new javax.swing.JTextField();
+        txtcolor1 = new javax.swing.JTextField();
+        txttipo1 = new javax.swing.JTextField();
+        lblcolor1 = new javax.swing.JLabel();
+        txtvalor1 = new javax.swing.JTextField();
+        lbltipov1 = new javax.swing.JLabel();
+        txtmultas1 = new javax.swing.JTextField();
+        lblvalor1 = new javax.swing.JLabel();
+        lblmultas1 = new javax.swing.JLabel();
+        txtcedula1 = new javax.swing.JTextField();
+        lblcedula1 = new javax.swing.JLabel();
+        lblnombre1 = new javax.swing.JLabel();
+        lblplaca1 = new javax.swing.JLabel();
+        txtnombre1 = new javax.swing.JTextField();
+        lblanio1 = new javax.swing.JLabel();
+        txtplaca1 = new javax.swing.JTextField();
+
+        jButton1.setText("jButton1");
+
+        lblmarca.setText("MARCA:");
+
+        lblcolor.setText("COLOR:");
+
+        lbltipov.setText("TIPO VEHICULO:");
+
+        lblvalor.setText("VALOR VEHICULO:");
+
+        lblmultas.setText("SI POSEE O NO MULTAS:");
+
+        lblcedula.setText("N CEDULA:");
+
+        lblnombre.setText("NOMBRE:");
+
+        lblplaca.setText("PLACA:");
+
+        lblanio.setText("ANIO FABRICACION V:");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        lbltitulo.setText("INFOTMACION FICHA");
+
+        btnvalidar.setText("VALIDAR");
+        btnvalidar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnvalidarActionPerformed(evt);
+            }
+        });
+
+        lblmarca1.setText("MARCA:");
+
+        lblcolor1.setText("COLOR:");
+
+        lbltipov1.setText("TIPO VEHICULO:");
+
+        txtmultas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmultas1ActionPerformed(evt);
+            }
+        });
+
+        lblvalor1.setText("VALOR VEHICULO:");
+
+        lblmultas1.setText("SI POSEE O NO MULTAS:");
+
+        lblcedula1.setText("N CEDULA:");
+
+        lblnombre1.setText("NOMBRE:");
+
+        lblplaca1.setText("PLACA:");
+
+        lblanio1.setText("ANIO FABRICACION V:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(226, Short.MAX_VALUE)
+                .addComponent(lbltitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(btnvalidar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblanio1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbltipov1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblvalor1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblmultas1)
+                        .addComponent(lblcolor1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblmarca1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblplaca1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblcedula1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblnombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtcedula1)
+                            .addComponent(txtnombre1)
+                            .addComponent(txtplaca1)
+                            .addComponent(txtanio1)
+                            .addComponent(txtmarca1)
+                            .addComponent(txtcolor1)
+                            .addComponent(txttipo1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtmultas1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtvalor1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(43, 43, 43)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(lbltitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 390, Short.MAX_VALUE)
+                .addComponent(btnvalidar)
+                .addGap(25, 25, 25))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(88, 88, 88)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtcedula1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblcedula1))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(lblnombre1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtnombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtplaca1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblplaca1))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtanio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblanio1))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtmarca1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblmarca1))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtcolor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblcolor1))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txttipo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(21, 21, 21)
+                            .addComponent(txtvalor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(9, 9, 9)
+                            .addComponent(txtmultas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(lbltipov1)
+                            .addGap(27, 27, 27)
+                            .addComponent(lblvalor1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(15, 15, 15)
+                            .addComponent(lblmultas1)))
+                    .addContainerGap(88, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnvalidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvalidarActionPerformed
+        // TODO add your handling code here:
+    
+      DatosPersonales datosPersonales = new DatosPersonales();
+
+           
+            String cedula = txtcedula.getText().toString();
+            String nombre = txtnombre.getText().toString();
+            String placa = txtplaca.getText().toString();
+            String favanioStr = txtanio.getText().toString();
+            String marca = txtmarca.getText().toString();
+            String color = txtcolor.getText().toString();
+            String tipov = txttipo.getText().toString();
+            String valorvStr =txtvalor.getText().toString();
+            String multasStr = txtmultas.getText().toString();
+
+           // Convertir valores a tipos adecuados (por ejemplo, String a int o double)
+                int favanio = Integer.parseInt(favanioStr);
+                double valorv = Double.parseDouble(valorvStr);
+                boolean multas = multasStr.equalsIgnoreCase("si");
+
+                double importeRenovacionPlacas = 0;
+                if (cedula.startsWith("1") && placa.contains("I")) {
+                    importeRenovacionPlacas = 0.05 * 435; // 5% del sueldo básico ($435)
+                }
+
+                // Validar y calcular multa por contaminación
+                double multaContaminacion = 0;
+                if (favanio < 2010) {
+                    multaContaminacion = 0.02 * (2010 - favanio); // 2% por cada año de contaminación
+
+                    // Validar y calcular valor de matriculación según la marca y tipo de vehículo
+                    double valorMatriculacion = 0;
+                    if (marca.equalsIgnoreCase("Toyota")) {
+                        if (tipov.equalsIgnoreCase("Jeep")) {
+                            valorMatriculacion = 0.08 * valorv;
+                        }
+                    } else if (tipov.equalsIgnoreCase("Camioneta")) {
+                        valorMatriculacion = 0.12 * valorv;
+                    }
+                } else if (marca.equalsIgnoreCase("Suzuki")) {
+                    if (tipov.equalsIgnoreCase("Vitara")) {
+                        double valorMatriculacion = 0.10 * valorv;
+                    } else if (tipov.equalsIgnoreCase("Automóvil")) {
+                        double valorMatriculacion = 0.09 * valorv;
+                    }
+                }   
+                              
+                        
+    }//GEN-LAST:event_btnvalidarActionPerformed
+
+    private void txtmultas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmultas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmultas1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +311,44 @@ public class Ficha extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnvalidar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lblanio;
+    private javax.swing.JLabel lblanio1;
+    private javax.swing.JLabel lblcedula;
+    private javax.swing.JLabel lblcedula1;
+    private javax.swing.JLabel lblcolor;
+    private javax.swing.JLabel lblcolor1;
+    private javax.swing.JLabel lblmarca;
+    private javax.swing.JLabel lblmarca1;
+    private javax.swing.JLabel lblmultas;
+    private javax.swing.JLabel lblmultas1;
+    private javax.swing.JLabel lblnombre;
+    private javax.swing.JLabel lblnombre1;
+    private javax.swing.JLabel lblplaca;
+    private javax.swing.JLabel lblplaca1;
+    private javax.swing.JLabel lbltipov;
+    private javax.swing.JLabel lbltipov1;
+    private javax.swing.JLabel lbltitulo;
+    private javax.swing.JLabel lblvalor;
+    private javax.swing.JLabel lblvalor1;
+    private javax.swing.JTextField txtanio;
+    private javax.swing.JTextField txtanio1;
+    private javax.swing.JTextField txtcedula;
+    private javax.swing.JTextField txtcedula1;
+    private javax.swing.JTextField txtcolor;
+    private javax.swing.JTextField txtcolor1;
+    private javax.swing.JTextField txtmarca;
+    private javax.swing.JTextField txtmarca1;
+    private javax.swing.JTextField txtmultas;
+    private javax.swing.JTextField txtmultas1;
+    private javax.swing.JTextField txtnombre;
+    private javax.swing.JTextField txtnombre1;
+    private javax.swing.JTextField txtplaca;
+    private javax.swing.JTextField txtplaca1;
+    private javax.swing.JTextField txttipo;
+    private javax.swing.JTextField txttipo1;
+    private javax.swing.JTextField txtvalor;
+    private javax.swing.JTextField txtvalor1;
     // End of variables declaration//GEN-END:variables
 }

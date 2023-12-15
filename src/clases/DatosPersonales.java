@@ -42,17 +42,17 @@ public class DatosPersonales extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(161, 161, 161)
                 .addComponent(btnVer)
-                .addGap(24, 24, 24))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
+                .addContainerGap(246, Short.MAX_VALUE)
                 .addComponent(btnVer)
-                .addGap(20, 20, 20))
+                .addGap(31, 31, 31))
         );
 
         pack();

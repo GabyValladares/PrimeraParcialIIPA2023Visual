@@ -214,7 +214,8 @@ public class RevisionVehicular extends javax.swing.JFrame {
     
     private void btnValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValidarActionPerformed
         // TODO add your handling code here:
-    String cedula = txtCedula.getText(); 
+        //Declaramos los campos de txt que va a ingresar el usurio
+ String cedula = txtCedula.getText(); 
 String nombres = txtNombres.getText();
 String numeroPlaca = txtNumeroPlaca.getText();
 String AnioFabricacion = txtAnoFabricacion.getText(); 
@@ -224,12 +225,14 @@ String tipoVehiculo = txtTipo.getText();
 String valorVehiculoStr = txtValor.getText();
 String multasStr = txtMultas.getText(); 
 
-// Convertir las cadenas a los tipos de datos correspondientes
-// Convertir las cadenas a los tipos de datos correspondientes
+// Convertimos las cadenas a los tipos de datos correspondientes
+
 int anioFabricacion = Integer.parseInt(AnioFabricacion);
 double valorVehiculo = Double.parseDouble(valorVehiculoStr);
-boolean poseeMultas = Boolean.parseBoolean(multasStr); // Asumo que estás usando un campo booleano
+boolean poseeMultas = Boolean.parseBoolean(multasStr); 
 
+//hacemos el objeto de tipo vehiculo
+//y pasamos los datos que va a ingresar el usuario
 Vehiculo vehiculo = new Vehiculo();
 vehiculo.setCedulaPropietario(cedula);
 vehiculo.setNombresPropietario(nombres);
@@ -241,7 +244,7 @@ vehiculo.setTipoVehiculo(tipoVehiculo);
 vehiculo.setValorVehiculo(valorVehiculo);
 vehiculo.setPoseeMultas(poseeMultas);
 
-// Calcula el costo de matriculación y lo muestra
+// Calcula el costo de matriculación y lo muestra en el campo de costo, pero llamamos a costo de matriculacion de la clase vehiculo
 double costoMatriculacion = vehiculo.calcularMatriculacion();
 txtCosto.setText(String.valueOf(costoMatriculacion));
 

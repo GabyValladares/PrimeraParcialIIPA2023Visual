@@ -92,7 +92,7 @@ public class Vehiculo {
     }
 
   
-
+// creamos un metodo tipo double para calcular
     public double calcularMatriculacion() {
         double costoMatriculacion = 0;
 

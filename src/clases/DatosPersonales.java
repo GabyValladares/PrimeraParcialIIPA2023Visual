@@ -4,7 +4,6 @@ package clases;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Usuario
@@ -28,9 +27,32 @@ public class DatosPersonales extends javax.swing.JFrame {
     private void initComponents() {
 
         btnVer = new javax.swing.JButton();
+        lblTitulo = new javax.swing.JLabel();
+        lblIIngreseDatos = new javax.swing.JLabel();
+        lblNmrCedula = new javax.swing.JLabel();
+        lblNombres = new javax.swing.JLabel();
+        lblNmrPlaca = new javax.swing.JLabel();
+        lblAnioFabricacion = new javax.swing.JLabel();
+        lblMarca = new javax.swing.JLabel();
+        lblColorVehiculo = new javax.swing.JLabel();
+        lblTipoVehiculo = new javax.swing.JLabel();
+        lblValorVehiculo = new javax.swing.JLabel();
+        lblMultas = new javax.swing.JLabel();
+        txtNmrCedula = new javax.swing.JTextField();
+        txtNombres = new javax.swing.JTextField();
+        txtNmrPlaca = new javax.swing.JTextField();
+        txtAnioFabricacion = new javax.swing.JTextField();
+        txtMarca = new javax.swing.JTextField();
+        txtColorVehiculo = new javax.swing.JTextField();
+        txtTipoVehiculo = new javax.swing.JTextField();
+        txtValorVehiculo = new javax.swing.JTextField();
+        txtMultas = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtaFicha = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnVer.setBackground(new java.awt.Color(255, 102, 0));
         btnVer.setText("Ver Ficha");
         btnVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -38,33 +60,291 @@ public class DatosPersonales extends javax.swing.JFrame {
             }
         });
 
+        lblTitulo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 51, 51));
+        lblTitulo.setText("Registro de Datos para Matrícula Vehicular");
+
+        lblIIngreseDatos.setForeground(new java.awt.Color(0, 0, 0));
+        lblIIngreseDatos.setText("Por favor ingrese los siguientes datos");
+
+        lblNmrCedula.setForeground(new java.awt.Color(0, 0, 0));
+        lblNmrCedula.setText("Número de cédula :");
+
+        lblNombres.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombres.setText("Nombres:");
+
+        lblNmrPlaca.setForeground(new java.awt.Color(0, 0, 0));
+        lblNmrPlaca.setText("Número de placa:");
+
+        lblAnioFabricacion.setForeground(new java.awt.Color(0, 0, 0));
+        lblAnioFabricacion.setText("Año de Fabricación del Vehículo:");
+
+        lblMarca.setForeground(new java.awt.Color(0, 0, 0));
+        lblMarca.setText("Marca:");
+
+        lblColorVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+        lblColorVehiculo.setText("Color vehículo:");
+
+        lblTipoVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+        lblTipoVehiculo.setText("Tipo de Vehículo:");
+
+        lblValorVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+        lblValorVehiculo.setText("Valor del Vehículo:");
+
+        lblMultas.setForeground(new java.awt.Color(0, 0, 0));
+        lblMultas.setText("Si posee o no multas:");
+
+        txtNmrCedula.setBackground(new java.awt.Color(204, 255, 204));
+        txtNmrCedula.setForeground(new java.awt.Color(0, 0, 0));
+        txtNmrCedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNmrCedulaActionPerformed(evt);
+            }
+        });
+
+        txtNombres.setBackground(new java.awt.Color(204, 255, 204));
+        txtNombres.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtNmrPlaca.setBackground(new java.awt.Color(204, 255, 204));
+        txtNmrPlaca.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtAnioFabricacion.setBackground(new java.awt.Color(204, 255, 204));
+        txtAnioFabricacion.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtMarca.setBackground(new java.awt.Color(204, 255, 204));
+        txtMarca.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtColorVehiculo.setBackground(new java.awt.Color(204, 255, 204));
+        txtColorVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+        txtColorVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtColorVehiculoActionPerformed(evt);
+            }
+        });
+
+        txtTipoVehiculo.setBackground(new java.awt.Color(204, 255, 204));
+        txtTipoVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtValorVehiculo.setBackground(new java.awt.Color(204, 255, 204));
+        txtValorVehiculo.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtMultas.setBackground(new java.awt.Color(204, 255, 204));
+        txtMultas.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtaFicha.setColumns(20);
+        txtaFicha.setRows(5);
+        jScrollPane1.setViewportView(txtaFicha);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
-                .addComponent(btnVer)
-                .addGap(24, 24, 24))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(btnVer))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(lblTitulo))
+                    .addComponent(lblIIngreseDatos)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblMultas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMultas, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblAnioFabricacion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtAnioFabricacion, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblNmrPlaca)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNmrPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblNombres)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblNmrCedula)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtNmrCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblMarca)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblColorVehiculo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtColorVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTipoVehiculo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtTipoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblValorVehiculo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtValorVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(96, 96, 96)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(248, 248, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblIIngreseDatos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNmrCedula)
+                            .addComponent(txtNmrCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNombres)
+                            .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNmrPlaca)
+                            .addComponent(txtNmrPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblAnioFabricacion)
+                            .addComponent(txtAnioFabricacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblMarca)
+                            .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblColorVehiculo)
+                            .addComponent(txtColorVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTipoVehiculo)
+                            .addComponent(txtTipoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblValorVehiculo)
+                            .addComponent(txtValorVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblMultas)
+                            .addComponent(txtMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55)
                 .addComponent(btnVer)
-                .addGap(20, 20, 20))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
-        // TODO add your handling code here:
-       Ficha f=new Ficha();
-       f.setVisible(true);
-       this.dispose();
-       
+        // Obtener los datos del formulario actual
+    String cedula = txtNmrCedula.getText();
+    String nombres = txtNombres.getText();
+    String placa = txtNmrPlaca.getText();
+    String anioFabricacion = txtAnioFabricacion.getText();
+    String marca = txtMarca.getText();
+    String color = txtColorVehiculo.getText();
+    String tipoVehiculo = txtTipoVehiculo.getText();
+    String valorVehiculo = txtValorVehiculo.getText();
+    String multas = txtMultas.getText();
+
+    // Construir la cadena con los datos de la ficha de matrícula vehicular
+    String fichaMatricula = "Ficha de Matrícula Vehicular\n\n"
+            + "Número de cédula: " + cedula + "\n"
+            + "Nombres: " + nombres + "\n"
+            + "Número de placa: " + placa + "\n"
+            + "Año de Fabricación del Vehículo: " + anioFabricacion + "\n"
+            + "Marca: " + marca + "\n"
+            + "Color vehículo: " + color + "\n"
+            + "Tipo de Vehículo: " + tipoVehiculo + "\n"
+            + "Valor del Vehículo: " + valorVehiculo + "\n"
+            + "Multas: " + multas;
+
+    // Establecer la cadena en el área de texto
+    txtaFicha.setText(fichaMatricula);
+
+    // Llamar a los métodos de cálculo
+    calcularRenovacionPlacas(cedula, placa);
+    calcularMultaContaminacion(anioFabricacion);
+    calcularValorMatriculacion(marca, tipoVehiculo, valorVehiculo);
+    calcularTotalPagar(multas);
+
     }//GEN-LAST:event_btnVerActionPerformed
+
+    
+
+// Método para calcular el importe de la renovación de placas
+private void calcularRenovacionPlacas(String cedula, String placa) {
+    // Verificar que la cédula inicie con "1" y que la placa contenga "I"
+    if (cedula.charAt(0) == '1' && placa.indexOf('I') != -1) {
+        double importeRenovacionPlacas = 0.05 * 435; // 5% del sueldo básico
+        txtaFicha.append("\nImporte por renovación de placas: $" + importeRenovacionPlacas);
+    }
+}
+
+
+// Método para calcular la multa por contaminación
+private void calcularMultaContaminacion(String anioFabricacion) {
+    int anio = Integer.parseInt(anioFabricacion);
+    int anioActual = java.time.Year.now().getValue();
+
+    if (anio < 2010) {
+        double multaContaminacion = 0.02 * (anioActual - anio); // 2% por cada año de contaminación
+        txtaFicha.append("\nMulta por contaminación: $" + multaContaminacion);
+    }
+}
+
+// Método para calcular el valor de matriculación
+private void calcularValorMatriculacion(String marca, String tipoVehiculo, String valorVehiculo) {
+    double valor = Double.parseDouble(valorVehiculo);
+    double porcentaje = 0;
+
+    if (marca.equalsIgnoreCase("Toyota")) {
+        if (tipoVehiculo.equalsIgnoreCase("Jeep")) {
+            porcentaje = 0.08;
+        } else if (tipoVehiculo.equalsIgnoreCase("Camioneta")) {
+            porcentaje = 0.12;
+        }
+    } else if (marca.equalsIgnoreCase("Suzuki")) {
+        if (tipoVehiculo.equalsIgnoreCase("Vitara")) {
+            porcentaje = 0.10;
+        } else if (tipoVehiculo.equalsIgnoreCase("Automóvil")) {
+            porcentaje = 0.09;
+        }
+    }
+
+    double valorMatriculacion = valor * porcentaje;
+    txtaFicha.append("\nValor de matriculación: $" + valorMatriculacion);
+}
+
+    // Método para calcular el importe total a pagar
+    private void calcularTotalPagar(String multas) {
+        if (!multas.isEmpty()) {
+            double sueldoBasico = 435; // Supongo que es el sueldo básico
+            double importeMultas = 0.25 * sueldoBasico; // 25% del sueldo básico
+            txtaFicha.append("\nImporte total por multas: $" + importeMultas);
+
+            // Calcular y mostrar el importe total a pagar
+            double totalPagar = importeMultas; // Puedes agregar aquí otros importes si es necesario
+            txtaFicha.append("\n\nImporte total a pagar: $" + totalPagar);
+        }
+    }
+    private void txtNmrCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNmrCedulaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNmrCedulaActionPerformed
+
+    private void txtColorVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtColorVehiculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtColorVehiculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,6 +375,7 @@ public class DatosPersonales extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 new DatosPersonales().setVisible(true);
             }
@@ -103,5 +384,27 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVer;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblAnioFabricacion;
+    private javax.swing.JLabel lblColorVehiculo;
+    private javax.swing.JLabel lblIIngreseDatos;
+    private javax.swing.JLabel lblMarca;
+    private javax.swing.JLabel lblMultas;
+    private javax.swing.JLabel lblNmrCedula;
+    private javax.swing.JLabel lblNmrPlaca;
+    private javax.swing.JLabel lblNombres;
+    private javax.swing.JLabel lblTipoVehiculo;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblValorVehiculo;
+    private javax.swing.JTextField txtAnioFabricacion;
+    private javax.swing.JTextField txtColorVehiculo;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtMultas;
+    private javax.swing.JTextField txtNmrCedula;
+    private javax.swing.JTextField txtNmrPlaca;
+    private javax.swing.JTextField txtNombres;
+    private javax.swing.JTextField txtTipoVehiculo;
+    private javax.swing.JTextField txtValorVehiculo;
+    private javax.swing.JTextArea txtaFicha;
     // End of variables declaration//GEN-END:variables
 }

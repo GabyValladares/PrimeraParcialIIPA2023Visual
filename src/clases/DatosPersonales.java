@@ -233,7 +233,7 @@ public class DatosPersonales extends javax.swing.JFrame {
         if (cedula.substring(0, 1).equals("1")&&
             placa.substring(0, 1).equals("I")) {
             
-            sumat += 0.87;
+            sumat += 21.75;
         } else {
             System.out.println("El número de cédula no comienza con '1'. ni la plana en I");
         }
@@ -243,7 +243,7 @@ public class DatosPersonales extends javax.swing.JFrame {
         int ani = Integer.parseInt(anio);
         if (ani<=2010) {
             for ( int i = ani ; i < 2023; i++) {
-             sumat += 2.17;   
+             sumat += 8.70;   
             }
         }
         else{

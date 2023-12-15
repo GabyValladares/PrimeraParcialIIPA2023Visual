@@ -1,5 +1,7 @@
 package clases;
 
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -28,9 +30,44 @@ public class DatosPersonales extends javax.swing.JFrame {
     private void initComponents() {
 
         btnVer = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtNumCedula = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtNumPlaca = new javax.swing.JTextField();
+        txtAnio = new javax.swing.JTextField();
+        txtMarca = new javax.swing.JTextField();
+        txtColor = new javax.swing.JTextField();
+        txtTipo = new javax.swing.JTextField();
+        txtValor = new javax.swing.JTextField();
+        txtMultas = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblC = new javax.swing.JLabel();
+        lblPl = new javax.swing.JLabel();
+        lblP = new javax.swing.JLabel();
+        lblA = new javax.swing.JLabel();
+        lblM = new javax.swing.JLabel();
+        lblV = new javax.swing.JLabel();
+        lblCo = new javax.swing.JLabel();
+        lblT = new javax.swing.JLabel();
+        lblNM = new javax.swing.JLabel();
+        lblValidarDatos = new javax.swing.JLabel();
+        lblRenovacionPlaca = new javax.swing.JLabel();
+        lblMultaContaminacion = new javax.swing.JLabel();
+        lblMultaTipo = new javax.swing.JLabel();
+        lblSiMultas = new javax.swing.JLabel();
+        lblTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnVer.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
         btnVer.setText("Ver Ficha");
         btnVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -38,21 +75,199 @@ public class DatosPersonales extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Ingresar Numero de cedula: ");
+
+        txtNumCedula.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtNombre.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtNumPlaca.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtAnio.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtMarca.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtColor.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtTipo.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtValor.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        txtMultas.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("Ingresar Nombre del Propietario: ");
+
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel3.setText("Ingresar Numero de placa: ");
+
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel4.setText("Ingresar Año de Fabricacion de Vehículo: ");
+
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("Ingresar Marca del Vehiculo: ");
+
+        jLabel6.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setText("Ingresar Color del Vehiculo: ");
+
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setText("Ingresar Tipo del Vehiculo: ");
+
+        jLabel8.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("Ingresar Valor del Vehiculo: ");
+
+        jLabel9.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel9.setText("Seleccionar \"S\" si Posee o \"N\" si No Multas:  ");
+
+        lblTitulo.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(255, 0, 0));
+        lblTitulo.setText("Bienvenidos a Matriculas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
-                .addComponent(btnVer)
-                .addGap(24, 24, 24))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTitulo)
+                .addGap(192, 192, 192))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblRenovacionPlaca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMultaContaminacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMultaTipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblSiMultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblValidarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtValor)
+                            .addComponent(txtTipo)
+                            .addComponent(txtColor)
+                            .addComponent(txtMarca)
+                            .addComponent(txtAnio)
+                            .addComponent(txtNumPlaca)
+                            .addComponent(txtNombre)
+                            .addComponent(txtNumCedula, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtMultas, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblPl, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblP, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblM, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblV, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblT, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNM, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addComponent(btnVer)
+                        .addGap(169, 169, 169))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
-                .addComponent(btnVer)
-                .addGap(20, 20, 20))
+                .addGap(22, 22, 22)
+                .addComponent(lblTitulo)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel1)
+                                            .addComponent(txtNumCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblC, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lblValidarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jLabel2)
+                                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(txtNumPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblPl, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(33, 33, 33)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel4)
+                                            .addComponent(txtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lblA, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5)
+                                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblM, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblCo, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(lblT, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblV, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(txtMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNM, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblRenovacionPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblMultaContaminacion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(btnVer)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblMultaTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblSiMultas, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -64,8 +279,176 @@ public class DatosPersonales extends javax.swing.JFrame {
        f.setVisible(true);
        this.dispose();
        
+       
+       String cedula = txtNumCedula.getText();
+       String nombre = txtNombre.getText();
+       String placa = txtNumPlaca.getText();
+       String anio = txtAnio.getText();
+       String marca = txtMarca.getText();
+       String color = txtColor.getText();
+       String tipo = txtTipo.getText();
+       String valor = txtValor.getText();
+       String multas = txtMultas.getText();
+       
+       this.validarDatos(nombre, cedula, placa, anio, marca, color, tipo, valor, multas);
+       this.Matriculacion(cedula, placa, anio, marca, tipo, valor, multas);
     }//GEN-LAST:event_btnVerActionPerformed
 
+    public void validarDatos (String nombre,String cedula, String placa, String anio, String marca,
+    String color, String tipo, String valor, String multas){
+        String validarNombre = "^[A-Za-zÀ-ÖØ-öø-ÿ]+([-']?[A-Za-zÀ-ÖØ-öø-ÿ]+)?$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarCedula = "^[0-9]{10}$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarPlaca = "^[A-Za-z0-9-]+$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarAnio = "^[0-9]+$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarMarca = "^[A-Za-z]+$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarColor = "^[A-Za-z]+$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarTipo = "^[A-Za-z]+$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        String validarValor = "^[0-9]+(\\.[0-9]+)?$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+       String validarMultas = "^[SN]$";    
+        
+        if (nombre.matches(validarNombre)) {
+            lblC.setForeground(Color.GREEN);
+            lblC.setText("✔");
+        } else {
+            lblC.setForeground(Color.RED);
+            lblC.setText("✘");
+        }
+        
+        lblValidarDatos.setText("Datos Correctos");
+    }
+    
+    public void Matriculacion(String cedula, String placa,String anio, String marca, String tipo, String valor, String multas){
+        double sueldoBasico = 435.0;
+        boolean cedulaEmpiezaEn1 = cedula.startsWith("1");
+        boolean placaContieneLetraI = placa.contains("I");
+        double Renovacion = 0;
+        
+        if (cedulaEmpiezaEn1 && placaContieneLetraI) {
+             Renovacion = 0.05 * sueldoBasico;
+
+            lblValidarDatos.setText("Se debe cobrar un importe del 5% del sueldo básico ($" + Renovacion + ") para la renovación de placas.");
+        } else {
+            lblValidarDatos.setText("No se aplican cargos para la renovación de placas.");
+        }
+        
+        //Multa por Contaminacion//
+        
+        int aniov = Integer.parseInt(anio);
+        int anosDeContaminacion = 2010 - aniov;
+        double porcentajeMulta = 0.02 * anosDeContaminacion;
+        double MultaContaminacion = porcentajeMulta * sueldoBasico;
+        lblMultaContaminacion.setText("Se debe cobrar una multa por contaminación de $" + MultaContaminacion);
+        
+        // Multas de Tipo de Vehiculo//
+        
+        double valorV = Double.parseDouble(valor);
+        double porcentajeMatriculacion = 0.0;
+
+        if (marca.equalsIgnoreCase("Toyota") && tipo.equalsIgnoreCase("Jeep")) {
+            porcentajeMatriculacion = 0.08;
+        } else if (marca.equalsIgnoreCase("Toyota") && tipo.equalsIgnoreCase("Camioneta")) {
+            porcentajeMatriculacion = 0.12;
+        } else if (marca.equalsIgnoreCase("Suzuki") && tipo.equalsIgnoreCase("Vitara")) {
+            porcentajeMatriculacion = 0.10;
+        } else if (marca.equalsIgnoreCase("Suzuki") && tipo.equalsIgnoreCase("Automóvil")) {
+            porcentajeMatriculacion = 0.09;
+        }
+
+        double valorMatriculacion = porcentajeMatriculacion * valorV;
+        lblMultaTipo.setText("El valor de matriculación es de $" + valorMatriculacion);
+        
+        // Si tiene Multas//
+        double valorPagar =0;
+        if(multas.equals("S")){
+            valorPagar = sueldoBasico*0.25;
+            lblSiMultas.setText("Por cometer multas su valor a pagar es: "+valorPagar);
+            
+        }else if(multas.equals("N")){
+            lblSiMultas.setText("Por cometer multas su valor a pagar es: 0.00 ");
+        }
+        
+        //Total de Multas//
+        
+        double totalPagar = valorPagar + valorMatriculacion+porcentajeMatriculacion+MultaContaminacion+Renovacion;
+        
+        lblTotal.setText("Su total es: "+totalPagar);
+    }
+    
+    
+       
+            
     /**
      * @param args the command line arguments
      */
@@ -103,5 +486,39 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVer;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblA;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblCo;
+    private javax.swing.JLabel lblM;
+    private javax.swing.JLabel lblMultaContaminacion;
+    private javax.swing.JLabel lblMultaTipo;
+    private javax.swing.JLabel lblNM;
+    private javax.swing.JLabel lblP;
+    private javax.swing.JLabel lblPl;
+    private javax.swing.JLabel lblRenovacionPlaca;
+    private javax.swing.JLabel lblSiMultas;
+    private javax.swing.JLabel lblT;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lblV;
+    private javax.swing.JLabel lblValidarDatos;
+    private javax.swing.JTextField txtAnio;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtMultas;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumCedula;
+    private javax.swing.JTextField txtNumPlaca;
+    private javax.swing.JTextField txtTipo;
+    private javax.swing.JTextField txtValor;
     // End of variables declaration//GEN-END:variables
 }

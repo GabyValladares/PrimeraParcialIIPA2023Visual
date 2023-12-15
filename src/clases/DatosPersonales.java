@@ -1,5 +1,10 @@
 package clases;
 
+import java.awt.Color;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -27,9 +32,78 @@ public class DatosPersonales extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        lbCedula = new javax.swing.JLabel();
+        txtCedulaPropietario = new javax.swing.JTextField();
+        txtNombreP = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtNumeroP = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtAñoFab = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtMarca = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         btnVer = new javax.swing.JButton();
+        txtColor = new javax.swing.JTextField();
+        txtTipoV = new javax.swing.JTextField();
+        txtValorV = new javax.swing.JTextField();
+        txtMultas = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
+        lbCedula.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        lbCedula.setForeground(new java.awt.Color(255, 0, 0));
+        lbCedula.setText("Número de Cédula del Propietario:");
+
+        txtCedulaPropietario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedulaPropietarioActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel3.setText("Nombres del Propietario:");
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel4.setText("Número de placa:");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel5.setText("Año de Fabricación del Vehículo:");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setText("Marca:");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setText("Color:");
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("Tipo de Vehículo:");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel9.setText("Valor del Vehículo:");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel10.setText("Posee o no multas:");
 
         btnVer.setText("Ver Ficha");
         btnVer.addActionListener(new java.awt.event.ActionListener() {
@@ -38,21 +112,128 @@ public class DatosPersonales extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(189, 189, 189)
+                                .addComponent(txtMultas))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(192, 192, 192)
+                                .addComponent(txtValorV, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbCedula)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))
+                                .addGap(88, 88, 88)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtCedulaPropietario, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                                    .addComponent(txtNombreP)
+                                    .addComponent(txtNumeroP)
+                                    .addComponent(txtAñoFab)
+                                    .addComponent(txtMarca)
+                                    .addComponent(txtColor)
+                                    .addComponent(txtTipoV)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addComponent(btnVer)))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbCedula)
+                    .addComponent(txtCedulaPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtNombreP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtNumeroP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(txtAñoFab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTipoV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtValorV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(txtMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(btnVer)
+                .addGap(14, 14, 14))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Sylfaen", 2, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("Datos de un Vehiculo a Matricular");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(184, 184, 184))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(298, Short.MAX_VALUE)
-                .addComponent(btnVer)
-                .addGap(24, 24, 24))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(257, Short.MAX_VALUE)
-                .addComponent(btnVer)
-                .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -60,11 +241,95 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
         // TODO add your handling code here:
-       Ficha f=new Ficha();
-       f.setVisible(true);
-       this.dispose();
+        Ficha f=new Ficha();
+        f.setVisible(true);
+        this.dispose();
+        
+        String cedulaP = txtCedulaPropietario.getText();
+        String Nombre = txtNombreP.getText();
+        String Color = txtColor.getText();
+        int valor = Integer.parseInt(txtValorV.getText());
+        String Tipo = txtTipoV.getText();
+        String Placa = txtNumeroP.getText();
+        String Marca = txtMarca.getText();
+        int AñoF =Integer.parseInt(txtAñoFab.getText());
+        if( cedulaP.isEmpty()|| Nombre.isEmpty() || Color.isEmpty() ||Tipo.isEmpty() ){
+            JOptionPane.showMessageDialog(rootPane, "ERROR, DATOS VACIOS.");  
+        
+            
+        
+          Pattern patternCedula=Pattern.compile("^\\d{10}$");
+            Matcher matcherCedula = patternCedula.matcher(cedulaP);
+            if(matcherCedula.matches()){
+                
+            }
+
+        // Validar nombres del propietario
+        if (!Nombre.isEmpty()) {
+            System.out.println("Nombres del Propietario Válidos");
+        } else {
+            System.out.println("Nombres del Propietario Inválidos");
+        }
+
+        // Validar año de fabricación del vehículo
+
+        }
+        double sueldoBasico = 435.0;
+        double montoMatriculacion = 0.0;
+        
        
+        if (cedulaP.startsWith("1") && Placa.startsWith("I")) {
+            montoMatriculacion += sueldoBasico * 0.05;
+        }
+        double importeRenovacionPlacas = 0;
+double multaContaminacion = 0;
+double valorMatriculacion = 0;
+
+// Calcular importe de renovación de placas si aplica
+if (String.valueOf(cedulaP).startsWith("1") && Placa.toUpperCase().startsWith("I")) {
+    importeRenovacionPlacas = 0.05 * 435; // 5% del sueldo básico ($435)
+}
+
+// Calcular multa por contaminación si aplica
+if (AñoF < 2010) {
+    int añosContaminacion = 2023 - AñoF; // Suponiendo el año actual es 2023
+    multaContaminacion = 0.02 * valor * añosContaminacion; // 2% por cada año de contaminación
+}
+
+// Calcular valor de matriculación dependiendo de la marca y tipo de vehículo
+if (Marca.equalsIgnoreCase("Toyota")) {
+    if (Tipo.equalsIgnoreCase("Jeep")) {
+        valorMatriculacion = 0.08 * valor; // 8% del valor del vehículo
+    } else if (Tipo.equalsIgnoreCase("Camioneta")) {
+        valorMatriculacion = 0.12 * valor; // 12% del valor del vehículo
+    }
+} else if (Marca.equalsIgnoreCase("Suzuki")) {
+    if (Tipo.equalsIgnoreCase("Vitara")) {
+        valorMatriculacion = 0.1 * valor; // 10% del valor del vehículo
+    } else if (Tipo.equalsIgnoreCase("Automóvil")) {
+        valorMatriculacion = 0.09 * valor; // 9% del valor del vehículo
+    }
+}
+
+// Calcular multa por tener multas si aplic
+
+// Calcular total a pagar por matriculación del vehículo
+double totalPagar = valorMatriculacion + importeRenovacionPlacas + multaContaminacion ;
+
+// Crear un mensaje con los resultados calculados
+String mensaje = "Importe renovación placas: $" + importeRenovacionPlacas + "\n" +
+                 "Multa contaminación: $" + multaContaminacion + "\n" +
+                 "Valor matriculación: $" + valorMatriculacion + "\n" +
+                 "Total a pagar: $" + totalPagar + "\n";
+
+// Mostrar el mensaje en un JOptionPane como un cuadro de diálogo informativo
+JOptionPane.showMessageDialog(null, mensaje, "Resultado Matriculación Vehículo", JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_btnVerActionPerformed
+
+    private void txtCedulaPropietarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaPropietarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCedulaPropietarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,5 +368,30 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVer;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbCedula;
+    private javax.swing.JTextField txtAñoFab;
+    private javax.swing.JTextField txtCedulaPropietario;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtMarca;
+    private javax.swing.JTextField txtMultas;
+    private javax.swing.JTextField txtNombreP;
+    private javax.swing.JTextField txtNumeroP;
+    private javax.swing.JTextField txtTipoV;
+    private javax.swing.JTextField txtValorV;
     // End of variables declaration//GEN-END:variables
+
+    private boolean validarPlaca(String Placa) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

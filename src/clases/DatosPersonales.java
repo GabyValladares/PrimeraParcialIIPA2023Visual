@@ -288,7 +288,8 @@ public class DatosPersonales extends javax.swing.JFrame {
         double valorMatricula = valorMatriculacion(marca, vehiculo, valorV);
         double multaDeMulta = calcularMultaDeMulta(Multas);
         double total = importe + contaminacion + valorMatricula + multaDeMulta;
-        String resultados = "Importe Renovación Placas: " + importe + "\n"
+        String resultados = "Nombres : " + nombres + "\n" + 
+                "Importe Renovación Placas: " + importe + "\n"
                 + "Multa por Contaminación: " + contaminacion + "\n"
                 + "Valor Matriculación: " + valorMatricula + "\n"
                 + "Multa por Multas: " + multaDeMulta + "\n"

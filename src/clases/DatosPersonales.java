@@ -59,6 +59,12 @@ public class DatosPersonales extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
+
+
+
+
+
+
         // TODO add your handling code here:
        Ficha f=new Ficha();
        f.setVisible(true);

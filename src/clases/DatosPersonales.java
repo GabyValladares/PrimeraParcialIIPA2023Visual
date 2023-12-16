@@ -1,12 +1,12 @@
 package clases;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Usuario
@@ -68,9 +68,33 @@ public class DatosPersonales extends javax.swing.JFrame {
         lblTitulo.setForeground(new java.awt.Color(0, 0, 255));
         lblTitulo.setText("Datos");
 
+        txtCedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCedulaKeyTyped(evt);
+            }
+        });
+
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
+
+        txtPlaca.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPlacaKeyTyped(evt);
+            }
+        });
+
+        txtAnioFab.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnioFabKeyTyped(evt);
+            }
+        });
+
         jLabel1.setText("NroCedula");
 
-        jLabel2.setText("Nombre Completo");
+        jLabel2.setText("Nombre y Apellido");
 
         jLabel3.setText("Nro Placa");
 
@@ -191,66 +215,101 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
         try {
-        double matriculaTotal=0.00;
-        String nroCedula=txtCedula.getText();
-        String nombre=txtNombre.getText();
-        String placa=txtPlaca.getText();
-        int anio=Integer.parseInt(txtAnioFab.getText());
-        String marca=txtMarca.getText();
-        String color=txtColor.getText();
-        String tipo=txtTipoVehiculo.getText();
-        double valorVehiculo=Double.parseDouble(txtValor.getText());
-        String multa="";
-        double marcaTipoValor=0;
-        int sueldoBasico=435;
-        double inicialesValor=0.00;
-        double multasValor=0.00;
-        double anioValor=0.00;
-        double cantidadMultaContaminacion=0;
-        
-        
-        if(nroCedula.charAt(0)=='1' && placa.charAt(0)=='I'||placa.charAt(0)=='i'){
-            inicialesValor=sueldoBasico*0.05;
-            matriculaTotal=inicialesValor;
-        }
-        if(multa.equalsIgnoreCase("si")){
-            multasValor=sueldoBasico*0.25;
-                matriculaTotal=matriculaTotal+multasValor;
+            double matriculaTotal = 0.00;
+            String nroCedula = txtCedula.getText();       
+            String placa = txtPlaca.getText();
+            int anio = Integer.parseInt(txtAnioFab.getText());
+            String marca = txtMarca.getText();
+            String tipo = txtTipoVehiculo.getText();
+            double valorVehiculo = Double.parseDouble(txtValor.getText());
+            String multa = txtMulta.getText();
+            double marcaTipoValor = 0;
+            int sueldoBasico = 435;
+            double inicialesValor = 0.00;
+            double multasValor = 0.00;
+            double cantidadMultaContaminacion = 0;
+
+            if (nroCedula.length()!=10 || !nroCedula.matches("[0-9]+") || !placa.matches("[A-Z]{3}-[0-9]{4}") || anio>1886 || !marca.matches("[a-zA-Z ]") || !tipo.matches("[a-zA-Z ]")) {
+            }else{
+                if (nroCedula.charAt(0) == '1' && placa.charAt(0) == 'I' || placa.charAt(0) == 'i') {
+                    inicialesValor = sueldoBasico * 0.05;
+                    matriculaTotal = inicialesValor;
+                }
+                if (multa.equalsIgnoreCase("si")) {
+                    multasValor = sueldoBasico * 0.25;
+                    matriculaTotal = matriculaTotal + multasValor;
+                }
+                if (anio < 2010) {
+                    int diferenciaAnios = 2010 - anio;
+                    double porcentajeAnio = diferenciaAnios * 0.02;
+                    cantidadMultaContaminacion = 435 * porcentajeAnio;
+                    matriculaTotal = matriculaTotal + cantidadMultaContaminacion;
+                }
+                if (marca.equalsIgnoreCase("Toyota")) {
+                    if (tipo.equalsIgnoreCase("Jeep")) {
+                        marcaTipoValor = valorVehiculo * 0.08;
+                    } else if (tipo.equalsIgnoreCase("Camioneta")) {
+                        marcaTipoValor = valorVehiculo * 0.12;
+                    }
+                } else if (marca.equalsIgnoreCase("Suzuki")) {
+                    if (tipo.equalsIgnoreCase("Vitara")) {
+                        marcaTipoValor = valorVehiculo * 0.1;
+                    } else if (tipo.equalsIgnoreCase("automovil")) {
+                        marcaTipoValor = valorVehiculo * 0.09;
+                    }
+                }
+                matriculaTotal = matriculaTotal + marcaTipoValor;
+                JOptionPane.showMessageDialog(rootPane, "El precio total de la matrícula es:"
+                        + "\nPor Ubicación: " + inicialesValor
+                        + "$\nPor Multas: " + multasValor
+                        + "$\nPor Contaminación: " + cantidadMultaContaminacion
+                        + "$\nPor las características del vehículo: " + marcaTipoValor
+                        + "$\nPrecio Total de Matrículación: " + matriculaTotal + "$");
             }
-        if(anio<2010){
-            int diferenciaAnios=2010-anio;
-            double porcentajeAnio=diferenciaAnios*0.02;
-            cantidadMultaContaminacion=435*porcentajeAnio;
-            matriculaTotal=matriculaTotal+cantidadMultaContaminacion;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "Complete correctamente todos los requisitos del formulario");
         }
-        if(marca.equalsIgnoreCase("Toyota")){
-            if(tipo.equalsIgnoreCase("Jeep")){
-                marcaTipoValor=valorVehiculo*0.08;
-            }else if(tipo.equalsIgnoreCase("Camioneta")){
-                marcaTipoValor=valorVehiculo*0.12;
-            }
-        }else if(marca.equalsIgnoreCase("Suzuki")){
-            if(tipo.equalsIgnoreCase("Vitara")){
-                marcaTipoValor=valorVehiculo*0.1;
-            }else if(tipo.equalsIgnoreCase("automovil")){
-                marcaTipoValor=valorVehiculo*0.09;
-            }
-        }
-        matriculaTotal=matriculaTotal+marcaTipoValor;
-        JOptionPane.showMessageDialog(rootPane, "El precio total de la matrícula es:"+
-                "\nPor Ubicación: "+inicialesValor+
-                "$\nPor Multas: "+multasValor+
-                "$\nPor Contaminación: "+cantidadMultaContaminacion+
-                "$\nPor las características del vehículo: "+marcaTipoValor+
-                "$\nPrecio Total de Matrículación: "+ matriculaTotal);
-        
-        }catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(rootPane, "Error: Ingrese un año de fabricación válido.");
-        }catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, "Complete todos los requisitos del formulario");
-        }
-        
+
     }//GEN-LAST:event_btnVerActionPerformed
+
+    private void txtCedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaKeyTyped
+        String nroCedula = txtCedula.getText();
+        if(!nroCedula.matches("[0-9]+") || nroCedula.length()!=9){
+            txtCedula.setForeground(Color.red);
+        }else{
+            txtCedula.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtCedulaKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        String nombre = txtNombre.getText();
+        if(!nombre.matches("[a-zA-Z ]+")){
+            txtNombre.setForeground(Color.red);
+        }else{
+            txtNombre.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtPlacaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPlacaKeyTyped
+        String placa = txtPlaca.getText();
+        if(!placa.matches("[A-Z]{3}-[0-9]{4}")){
+            txtPlaca.setForeground(Color.red);
+        }else{
+            txtPlaca.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtPlacaKeyTyped
+
+    private void txtAnioFabKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioFabKeyTyped
+        try {
+            int anio = Integer.parseInt(txtAnioFab.getText());
+            if(anio>2025 || anio<1886){
+                txtAnioFab.setForeground(Color.red);
+            }else{
+                txtAnioFab.setForeground(Color.BLACK);
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_txtAnioFabKeyTyped
 
     /**
      * @param args the command line arguments

@@ -182,12 +182,24 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCedula">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCedulaKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNombre">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNombreKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPlaca">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtPlacaKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAnioFab">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAnioFabKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMarca">
     </Component>
@@ -206,7 +218,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre Completo"/>
+        <Property name="text" type="java.lang.String" value="Nombre y Apellido"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">

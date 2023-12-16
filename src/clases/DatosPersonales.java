@@ -199,50 +199,54 @@ public class DatosPersonales extends javax.swing.JFrame {
         String marca=txtMarca.getText();
         String color=txtColor.getText();
         String tipo=txtTipoVehiculo.getText();
-        double valor=0;
+        double valorVehiculo=Double.parseDouble(txtValor.getText());
         String multa="";
         double marcaTipoValor=0;
-        int sueldoBásico=435;
+        int sueldoBasico=435;
         double inicialesValor=0.00;
         double multasValor=0.00;
         double anioValor=0.00;
+        double cantidadMultaContaminacion=0;
+        
         
         if(nroCedula.charAt(0)=='1' && placa.charAt(0)=='I'||placa.charAt(0)=='i'){
-            inicialesValor=sueldoBásico*0.05;
+            inicialesValor=sueldoBasico*0.05;
             matriculaTotal=inicialesValor;
-            if(multa.equalsIgnoreCase("si")){
-                multasValor=sueldoBásico*0.25;
-                System.out.println(multasValor);
+        }
+        if(multa.equalsIgnoreCase("si")){
+            multasValor=sueldoBasico*0.25;
                 matriculaTotal=matriculaTotal+multasValor;
             }
-        }
         if(anio<2010){
-            double cantidadMulta=435*((2010-anio)*0.02);
-            matriculaTotal=matriculaTotal+cantidadMulta;
+            int diferenciaAnios=2010-anio;
+            double porcentajeAnio=diferenciaAnios*0.02;
+            cantidadMultaContaminacion=435*porcentajeAnio;
+            matriculaTotal=matriculaTotal+cantidadMultaContaminacion;
         }
         if(marca.equalsIgnoreCase("Toyota")){
             if(tipo.equalsIgnoreCase("Jeep")){
-                marcaTipoValor=valor*0.08;
+                marcaTipoValor=valorVehiculo*0.08;
             }else if(tipo.equalsIgnoreCase("Camioneta")){
-                anioValor=valor*0.12;
-                matriculaTotal=matriculaTotal+anioValor;
+                marcaTipoValor=valorVehiculo*0.12;
             }
         }else if(marca.equalsIgnoreCase("Suzuki")){
             if(tipo.equalsIgnoreCase("Vitara")){
-                marcaTipoValor=valor*0.1;
+                marcaTipoValor=valorVehiculo*0.1;
             }else if(tipo.equalsIgnoreCase("automovil")){
-                marcaTipoValor=valor*0.09;
+                marcaTipoValor=valorVehiculo*0.09;
             }
         }
         matriculaTotal=matriculaTotal+marcaTipoValor;
         JOptionPane.showMessageDialog(rootPane, "El precio total de la matrícula es:"+
                 "\nPor Ubicación: "+inicialesValor+
                 "$\nPor Multas: "+multasValor+
-                "$\nPor el año de fabricación: "+anioValor+
+                "$\nPor Contaminación: "+cantidadMultaContaminacion+
                 "$\nPor las características del vehículo: "+marcaTipoValor+
                 "$\nPrecio Total de Matrículación: "+ matriculaTotal);
         
-        } catch (Exception e) {
+        }catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "Error: Ingrese un año de fabricación válido.");
+        }catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, "Complete todos los requisitos del formulario");
         }
         

@@ -16,6 +16,7 @@ public class Ficha extends javax.swing.JFrame {
     public Ficha() {
         initComponents();
         
+        
     }
 
     /**

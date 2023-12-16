@@ -1,5 +1,7 @@
 package clases;
 
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -9,6 +11,10 @@ package clases;
  * @author Usuario
  */
 public class DatosPersonales extends javax.swing.JFrame {
+
+    private final int basico = 435;
+    public double totalPagar = 0;
+    boolean tieneMultas;
 
     /**
      * Creates new form DatosPersonales
@@ -37,7 +43,6 @@ public class DatosPersonales extends javax.swing.JFrame {
         lblColor = new javax.swing.JLabel();
         lblTipovehiculo = new javax.swing.JLabel();
         lblValor = new javax.swing.JLabel();
-        cmbMulta = new javax.swing.JComboBox<>();
         lblMultas = new javax.swing.JLabel();
         txtPlaca = new javax.swing.JTextField();
         txtCedula = new javax.swing.JTextField();
@@ -47,6 +52,7 @@ public class DatosPersonales extends javax.swing.JFrame {
         txtValor = new javax.swing.JTextField();
         txtColor = new javax.swing.JTextField();
         txtTipoVehiculo = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,18 +82,18 @@ public class DatosPersonales extends javax.swing.JFrame {
 
         lblValor.setText("Valor del Vehículo");
 
-        cmbMulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "SI", "NO" }));
-        cmbMulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbMultaActionPerformed(evt);
-            }
-        });
-
-        lblMultas.setText("posee  multas");
+        lblMultas.setText("Posee Multas: ");
 
         txtTipoVehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTipoVehiculoActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -111,30 +117,31 @@ public class DatosPersonales extends javax.swing.JFrame {
                             .addComponent(lblTipovehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTipoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblMultas, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txtValor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                        .addComponent(lblColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cmbMulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblMultas, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtValor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                                    .addComponent(lblColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(txtanioFabr, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(332, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblNombrePro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(309, 309, 309))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtNombrePro, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblNombrePro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(101, 101, 101))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(txtNombrePro, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButton1)
+                        .addGap(49, 49, 49)
                         .addComponent(btnVer)
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -180,16 +187,19 @@ public class DatosPersonales extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblMultas)
+                        .addGap(28, 28, 28)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblNombrePro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cmbMulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblMultas))
-                        .addGap(25, 25, 25)))
-                .addComponent(lblNombrePro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNombrePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnVer))
-                .addContainerGap())
+                            .addComponent(txtNombrePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVer))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(19, 19, 19))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,30 +227,38 @@ public class DatosPersonales extends javax.swing.JFrame {
         f.setVisible(true);
         this.dispose();
 
-        String cedula = txtCedula.getText();
-        String placa = txtPlaca.getText();
-        int anio = Integer.parseInt(txtanioFabr.getText());
-        Double valor = Double.valueOf(txtValor.getText());
-        String marca = txtMarca.getText();
-        String tipo = txtTipoVehiculo.getText();
-    
-       String multas = (String) cmbMulta.getSelectedItem();
-        System.out.println(""+multas);
-        
 
-        ValidaCedula(cedula, placa);
-        verfificarAnio(anio);
-        validarValorMatricula(valor, marca, tipo);
-        
     }//GEN-LAST:event_btnVerActionPerformed
-
-    private void cmbMultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMultaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbMultaActionPerformed
 
     private void txtTipoVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTipoVehiculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTipoVehiculoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (!txtCedula.getText().isEmpty() && !txtColor.getText().isEmpty() && !txtMarca.getText().isEmpty() && !txtNombrePro.getText().isEmpty() && !txtPlaca.getText().isEmpty() && !txtTipoVehiculo.getText().isEmpty() && !txtValor.getText().isEmpty() && !txtanioFabr.getText().isEmpty()) {
+
+            String cedula = txtCedula.getText();
+            String placa = txtPlaca.getText();
+            int anio = Integer.parseInt(txtanioFabr.getText());
+            Double valor = Double.valueOf(txtValor.getText());
+            String marca = txtMarca.getText();
+            String tipo = txtTipoVehiculo.getText();
+
+            this.sitieneMultas();
+
+
+            this.renovacionPlaca(valor,cedula, placa);
+            
+            this.verfificarAnio(anio);
+            this.validarValorMatriculacion( marca, tipo);
+
+
+
+        } else {
+            JOptionPane.showConfirmDialog(rootPane, "COMPLETE TODOS LOS CAMPOS");
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,7 +297,7 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnVer;
-    private javax.swing.JComboBox<String> cmbMulta;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAnioFabr;
@@ -301,36 +319,64 @@ public class DatosPersonales extends javax.swing.JFrame {
     private javax.swing.JTextField txtanioFabr;
     // End of variables declaration//GEN-END:variables
 
-    private void ValidaCedula(String cedula, String placa) {
+    private void renovacionPlaca(Double valor,String cedula, String placa) {
 
-        if (cedula.charAt(0) == 'L' || placa.charAt(0) == 'l' || placa.charAt(0) == 'l') {
-            System.out.println("5% del sueldo básico ($435)para renovación de placas");
+        if (cedula.charAt(0) == 'L' == true || placa.charAt(0) == 'l' == true && placa.charAt(0) == 'l' == true && placa.charAt(0) == 'l' == true) {
+              totalPagar += valor+(basico * 0.05);
+              JOptionPane.showMessageDialog(rootPane, "Renovacion de placa costo en $: "+totalPagar);
+            
 
         } else {
+           JOptionPane.showMessageDialog(rootPane, "Renovacion de placa costo en $: "+totalPagar);
 
         }
 
     }
 
     private void verfificarAnio(int anio) {
-        if (anio > 210) {
-            System.out.println("multa por contaminacion equivalente al 2% por cada año de contaminación");
+
+        if (anio < 2010) {
+            int aniosDeMultas = (anio - 2010) * -1;
+            
+            totalPagar += (basico * (aniosDeMultas * (0.02)));
+            lblMultas.setText("SI TIENE MULTAS");
+            this.sitieneMultas();
+
         } else {
+            lblMultas.setText("NO TIENE MULTAS");
+            
         }
+        JOptionPane.showMessageDialog(rootPane, "MULTA POR AÑOS: : "+"\n"+""+totalPagar);
     }
 
-    private void validarValorMatricula(Double valor, String marca, String tipo) {
+    private void validarValorMatriculacion( String marca, String tipo) {
 
-        if (marca.equalsIgnoreCase("TOYOTA") && tipo.equalsIgnoreCase("JEEP")) {
+        if (marca.equalsIgnoreCase("TOYOTA")==true && tipo.equalsIgnoreCase("JEEP")==true) {
             System.out.println(" el  8% del valor del vehículo ");
+            totalPagar += (basico * 0.08);
 
-        } else if (marca.equalsIgnoreCase("TOYOTA") && tipo.equalsIgnoreCase("CAMIONETA")) {
+        } else if (marca.equalsIgnoreCase("TOYOTA")==true && tipo.equalsIgnoreCase("CAMIONETA")==true) {
             System.out.println(" el  12% del valor del vehículo ");
-        } else if (marca.equalsIgnoreCase("SUZUKY") && tipo.equalsIgnoreCase("VITARA")) {
+            totalPagar += (basico * 0.12);
+        } else if (marca.equalsIgnoreCase("SUZUKY")==true && tipo.equalsIgnoreCase("VITARA")==true) {
             System.out.println(" el  10% del valor del vehículo ");
-        }else if(marca.equalsIgnoreCase("SUZUKY") && tipo.equalsIgnoreCase("AUTOMOVIL")){
+            totalPagar += (basico * 0.10);
+        } else if (marca.equalsIgnoreCase("SUZUKY")==true && tipo.equalsIgnoreCase("AUTOMOVIL")) {
             System.out.println(" el  9% del valor del vehículo ");
+            totalPagar += (basico * 0.09);
         }
+        JOptionPane.showMessageDialog(rootPane, "Matriculacion: $ "+totalPagar);
 
     }
+
+    private void sitieneMultas() {
+
+        double pagarMulta = basico * 0.25;
+
+        JOptionPane.showMessageDialog(rootPane, "MULTA DE: $" + pagarMulta);
+        totalPagar += pagarMulta;
+
+    }
+
+
 }

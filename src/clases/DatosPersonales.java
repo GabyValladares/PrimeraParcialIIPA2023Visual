@@ -244,9 +244,10 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     private double multaContaminacion(int añoFabricacion) {
         if (añoFabricacion < 2010) {
-            return 0.02 * (2022 - añoFabricacion);
-        }
+            return 0.02 * (2024 - añoFabricacion);
+        }else{
         return 0.0;
+        }      
     }
 
     private double valorMatriculacion(String marca, String vehiculo, double valorVehiculo) {
@@ -267,10 +268,11 @@ public class DatosPersonales extends javax.swing.JFrame {
     }
 
     private double calcularMultaDeMulta(String multas) {
-        return multas.equals("Si") ? 0.25 * 435 : 0.0;
+        return multas.equals("Si") ? 0.25 * 425 : 0.0;
     }
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
         // TODO add your handling code here:
+        
         String nombres = txtNombres.getText();
         String apellidos = txtApellidos.getText();
         String cedula = txtCedula.getText();
@@ -288,14 +290,21 @@ public class DatosPersonales extends javax.swing.JFrame {
         double valorMatricula = valorMatriculacion(marca, vehiculo, valorV);
         double multaDeMulta = calcularMultaDeMulta(Multas);
         double total = importe + contaminacion + valorMatricula + multaDeMulta;
-        String resultados = "Nombres : " + nombres + "\n" + 
+        String resultado = "Propietario: " + nombres + apellidos + "\n"+
+                "Cedula del Propietario: " + cedula +"\n"+
+                "Placa del vehiculo: " + placa +"\n"+
+                "Año de Fabricacion: " + año +"\n"+
+                "Marca del vehiculo: " + marca +"\n"+
+                "Color del Vehiculo: " + color +"\n"+
+                "Tipo de vehiculo: " + vehiculo +"\n"+
+                "Tiene Multas: " + Multas +"\n"+
                 "Importe Renovación Placas: " + importe + "\n"
                 + "Multa por Contaminación: " + contaminacion + "\n"
                 + "Valor Matriculación: " + valorMatricula + "\n"
                 + "Multa por Multas: " + multaDeMulta + "\n"
                 + "Total a Pagar: " + total;
-        
-        txtResultado.setText(resultados);
+        JOptionPane.showMessageDialog(rootPane, resultado);
+        txtResultado.setText(resultado);
 
 //Ficha f = new Ficha();
         //f.setVisible(true);

@@ -229,7 +229,7 @@ public class DatosPersonales extends javax.swing.JFrame {
             double multasValor = 0.00;
             double cantidadMultaContaminacion = 0;
 
-            if (nroCedula.length()!=10 || !nroCedula.matches("[0-9]+") || !placa.matches("[A-Z]{3}-[0-9]{4}") || anio>1886 || !marca.matches("[a-zA-Z ]") || !tipo.matches("[a-zA-Z ]")) {
+            if (nroCedula.length()!=10 || !nroCedula.matches("[0-9]+") || !placa.matches("[A-Z]{3}-[0-9]{4}") || anio<1886 || !marca.matches("[a-zA-Z ]") || !tipo.matches("[a-zA-Z ]")) {
             }else{
                 if (nroCedula.charAt(0) == '1' && placa.charAt(0) == 'I' || placa.charAt(0) == 'i') {
                     inicialesValor = sueldoBasico * 0.05;

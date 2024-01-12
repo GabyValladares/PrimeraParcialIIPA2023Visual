@@ -286,7 +286,7 @@ public void mostrarResultado(double costoMatricula) {
     public double calcularCostoMatricula(String marca, String tipoVehiculo, int añoFabricacion,
                                      String numeroCedula, String numeroPlaca, boolean tieneMultas) {
     double sueldoBasico = 435;
-    double valorVehiculo = 15000;
+    double valorVehiculo = Double.parseDouble(txtValor.getText()) ;
     double costoMatricula = 0;
 
     if (numeroCedula.startsWith("1") && numeroPlaca.startsWith("I")) {

@@ -13,11 +13,13 @@ public class Ficha extends javax.swing.JFrame {
     /**
      * Creates new form Ficha
      */
-    
+    private DatosPersonales DatosPersonales;
     
     
     public Ficha() {
         initComponents();
+        setLocationRelativeTo(this);
+       
     }
   
     /**
@@ -49,6 +51,7 @@ public class Ficha extends javax.swing.JFrame {
         lblValor = new javax.swing.JLabel();
         lblMultas = new javax.swing.JLabel();
         btnValidar = new javax.swing.JButton();
+        lblValorV = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,6 +98,8 @@ public class Ficha extends javax.swing.JFrame {
             }
         });
 
+        lblValorV.setText(".......");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -126,7 +131,9 @@ public class Ficha extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(26, 26, 26)
                                         .addComponent(jLabel9)
-                                        .addGap(18, 18, 18)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(lblValorV, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
@@ -152,7 +159,7 @@ public class Ficha extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(249, 249, 249)
                         .addComponent(jLabel1)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +191,8 @@ public class Ficha extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(lblVehiculo)
-                    .addComponent(lblValor))
+                    .addComponent(lblValor)
+                    .addComponent(lblValorV))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -198,40 +206,12 @@ public class Ficha extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    DatosPersonales p = new DatosPersonales();
+    
+    
     
 
     private void btnValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValidarActionPerformed
-        // TODO add your handling code here:
-          DatosPersonales d = new DatosPersonales();
-          
-           int cedula = 0;
-        String nombre = null;
-        String placa = null;
-        
-        String marca = null;
-        String color = null;
-        String tipo = null;
-        int valor = 0;
-          
-          
-          lblNombres.setText(nombre);
-          lblPlaca.setText(placa);
-          lblMarca.setText(marca);
-          lblColor.setText(color);
-          lblVehiculo.setText(tipo);
-          
-          
-        
-        
-        
-       
-        double importeRenovacionPlacas = 0;
-        double multaContaminacion = 0;
-        double valorMatriculacion = 0;
-        double multas = 0;
 
-        
     }//GEN-LAST:event_btnValidarActionPerformed
 
     /**
@@ -281,14 +261,15 @@ public class Ficha extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel lblAño;
-    private javax.swing.JLabel lblCedula;
-    private javax.swing.JLabel lblColor;
-    private javax.swing.JLabel lblMarca;
-    private javax.swing.JLabel lblMultas;
-    private javax.swing.JLabel lblNombres;
-    private javax.swing.JLabel lblPlaca;
+    public static javax.swing.JLabel lblAño;
+    public static javax.swing.JLabel lblCedula;
+    public static javax.swing.JLabel lblColor;
+    public static javax.swing.JLabel lblMarca;
+    public static javax.swing.JLabel lblMultas;
+    public static javax.swing.JLabel lblNombres;
+    public static javax.swing.JLabel lblPlaca;
     private javax.swing.JLabel lblValor;
-    private javax.swing.JLabel lblVehiculo;
+    public static javax.swing.JLabel lblValorV;
+    public static javax.swing.JLabel lblVehiculo;
     // End of variables declaration//GEN-END:variables
 }

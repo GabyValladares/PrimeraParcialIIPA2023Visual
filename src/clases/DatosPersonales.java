@@ -1,5 +1,6 @@
 package clases;
 
+import static clases.Ficha.lblCedula;
 import javax.swing.SpinnerNumberModel;
 
 /*
@@ -18,12 +19,8 @@ public class DatosPersonales extends javax.swing.JFrame {
      */
     public DatosPersonales() {
         initComponents();
-        
-        SpinnerNumberModel añ = new  SpinnerNumberModel();
-        añ.setMaximum(2023);
-        añ.setMinimum(1990);
-        añ.setStepSize(2000);
-        spiValor.setModel(añ);
+        Ficha abrir = new Ficha();
+        abrir.setVisible(true);
     }
 
     /**
@@ -217,19 +214,21 @@ public class DatosPersonales extends javax.swing.JFrame {
 
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
         // TODO add your handling code here:
-        
-       Ficha f=new Ficha();
-       f.setVisible(true);
-       this.dispose();
        
-        int cedula = Integer.parseInt(txtCedula.getText());
-        String nombre = txtNombre.getText();
-        String placa = txtPlaca.getText();
+       //Ficha f= new Ficha();
+       //f.setVisible(true);
+       //this.dispose();
+       
         
-        String marca = txtMarca.getText();
-        String color = txtColor.getText();
-        String tipo = txtVehiculo.getText();
-        int valor = Integer.parseInt(txtValor.getText());
+       Ficha.lblCedula.setText(txtCedula.getText());
+       Ficha.lblNombres.setText(txtNombre.getText());
+       Ficha.lblPlaca.setText(txtPlaca.getText());
+       Ficha.lblMarca.setText(txtMarca.getText());
+       Ficha.lblColor.setText(txtColor.getText());
+       Ficha.lblVehiculo.setText(txtVehiculo.getText());
+       Ficha.lblValorV.setText(txtValor.getText());
+       
+        
         
         
        
